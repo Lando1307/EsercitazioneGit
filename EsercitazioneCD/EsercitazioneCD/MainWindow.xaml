@@ -1,12 +1,37 @@
 ﻿<Window x:Class="EsercitazioneCD.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EsercitazioneCD"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gestione Brano" Height="580" Width="525">
     <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Titolo Brano:" FontWeight="Bold" Width="100"/>
+            <TextBox Name="TitoloTextBox" Width="300" Margin="0,0,0,10"/>
 
+            <TextBlock Text="Autore Brano:" FontWeight="Bold" Width="100"/>
+            <TextBox Name="AutoreTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Durata (minuti):" FontWeight="Bold" Width="100"/>
+            <TextBox Name="DurataTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <Button Content="Visualizza Brano" Width="150" Margin="0,0,0,10" Click="VisualizzaBrano_Click"/>
+            <TextBlock Name="BranoInfo" FontWeight="Bold" TextWrapping="Wrap"/>
+
+            <TextBlock Text="Titolo CD:" FontWeight="Bold" Margin="0,20,0,0"/>
+            <TextBox Name="CDTitoloTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Autore CD:" FontWeight="Bold"/>
+            <TextBox Name="CDAutoreTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <Button Content="Crea CD" Width="150" Margin="0,0,0,10" Click="CreaCD_Click"/>
+            <TextBlock Name="CDInfo" FontWeight="Bold" TextWrapping="Wrap" Margin="0,10,0,0"/>
+
+            <Button Content="Aggiungi Brano al CD" Width="200" Click="AggiungiBranoCD_Click" Margin="0,10,0,10"/>
+            <TextBlock Name="CDBraniInfo" FontWeight="Bold" TextWrapping="Wrap"/>
+
+            <TextBlock Text="Durata limite per 'Short Song':" FontWeight="Bold" Margin="0,20,0,0" Width="178"/>
+            <TextBox Name="DurataLimiteTextBox" Width="300" Margin="0,0,0,10"/>
+            <Button Content="Verifica Brevi" Width="150" Click="VerificaBrevi_Click" Margin="0,10,0,10"/>
+            <TextBlock Name="ShortSongResults" FontWeight="Bold" TextWrapping="Wrap"/>
+        </StackPanel>
     </Grid>
 </Window>
